@@ -12,10 +12,16 @@
     --paragraph-size: 18px;
 }
 
+/* Reset default margins and paddings */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 /* Body and container */
 body {
     font-family: var(--font-family);
-    line-height: 1.6;
+    line-height: 1.5;
     padding-top: var(--nav-height);
     background-color: var(--background-color);
 }
