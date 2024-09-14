@@ -1,9 +1,16 @@
-/* General Styles */
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    color: #333;
+    padding-top: 70px; /* Adjust this to the height of your sticky nav */
+    background-color: #f4f4f4;
 }
 
 .container {
@@ -12,10 +19,15 @@ body {
     overflow: hidden;
 }
 
-/* Navigation Bar */
+/* Sticky Navigation Bar */
 nav {
-    background: #35424a;
-    color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #35424a;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
 }
 
 nav .container {
@@ -24,10 +36,13 @@ nav .container {
     align-items: center;
 }
 
-nav .logo a {
+nav h1.logo {
+    font-size: 24px;
+}
+
+nav h1.logo a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 24px;
 }
 
 nav ul {
@@ -50,9 +65,45 @@ nav ul li a.current {
     color: #e8491d;
 }
 
-/* Sections */
+/* Header / Hero Section */
+#home {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#home .btn-primary {
+    background-color: #e8491d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#home .btn-primary:hover {
+    background-color: #cf3c1b;
+}
+
+/* Section Styling */
 section {
     padding: 60px 0;
+    background-color: #ffffff;
 }
 
 section h2 {
@@ -66,12 +117,55 @@ section ul {
     font-size: 18px;
 }
 
-/* Experience Items */
+/* About Section */
+#about {
+    background-color: #e4e4e4;
+    padding: 60px 20px;
+    border-top: 4px solid #35424a;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#about .about-content h3 {
+    font-size: 24px;
+    color: #e8491d;
+    margin-bottom: 10px;
+}
+
+#about .about-content p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #ffffff;
+}
+
+#skills h2 {
+    font-size: 36px;
+}
+
+#skills ul {
+    margin: 20px 0;
+    padding-left: 40px;
+    list-style-type: disc;
+}
+
+/* Experience Section */
+#experience {
+    background-color: #f4f4f4;
+}
+
 .experience-item {
     margin-bottom: 40px;
 }
 
 .experience-item h3 {
+    font-size: 24px;
     color: #e8491d;
 }
 
@@ -80,13 +174,25 @@ section ul {
     margin-left: 20px;
 }
 
-/* Achievements */
+/* Achievements Section */
+#achievements {
+    background-color: #ffffff;
+}
+
 #achievements ul {
     list-style-type: disc;
     margin-left: 40px;
 }
 
 /* Contact Section */
+#contact {
+    background-color: #e4e4e4;
+}
+
+#contact p {
+    font-size: 20px;
+}
+
 #contact p a {
     color: #e8491d;
     text-decoration: none;
@@ -98,13 +204,13 @@ section ul {
 
 /* Footer */
 footer {
-    background: #35424a;
+    background-color: #35424a;
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
 }
 
-/* Responsive Styles */
+/* Responsive Styling */
 @media (max-width: 768px) {
     nav .container {
         flex-direction: column;
@@ -112,18 +218,23 @@ footer {
 
     nav ul {
         flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 
     nav ul li {
-        margin: 0;
-        text-align: center;
+        margin-left: 0;
     }
 
     .container {
         width: 90%;
     }
-}
-html {
-    scroll-behavior: smooth;
+
+    #home h2 {
+        font-size: 36px;
+    }
+
+    #home p {
+        font-size: 18px;
+    }
 }
