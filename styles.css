@@ -236,7 +236,7 @@ footer {
 
 /* Scrollable text content on the right */
 .about-content {
-    margin-left: 320px; /* Creates space for the fixed image */
+    margin-left: 400px; /* Creates space for the fixed image */
     padding: 20px;
     max-width: 800px; /* Limit the width of the text */
     flex: 1;
