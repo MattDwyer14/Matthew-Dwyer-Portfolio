@@ -208,3 +208,37 @@ footer {
         font-size: 16px;
     }
 }
+
+/* Flexbox layout for About Me section */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between the image and the content */
+}
+
+.about-image {
+    flex: 1 1 250px; /* Makes the image take up 1 part of the container, minimum size 250px */
+}
+
+.about-image img {
+    max-width: 100%; /* Ensures the image resizes responsively */
+    height: auto;
+    border-radius: 10px; /* Optional: adds rounded corners to the image */
+}
+
+.about-content {
+    flex: 2 1 500px; /* Makes the content take up more space (2 parts of the container) */
+}
+
+/* Ensure proper layout on smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stacks the image and content vertically on small screens */
+        text-align: center; /* Optional: centers the text */
+    }
+
+    .about-image {
+        margin-bottom: 20px; /* Adds space between the image and the content when stacked */
+    }
+}
