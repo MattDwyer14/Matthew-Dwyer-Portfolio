@@ -219,7 +219,7 @@ footer {
     position: fixed; /* Keeps the image fixed in place while scrolling */
     left: 0; /* Aligns it to the left edge */
     top: 0; /* Aligns it to the top */
-    width: 300px; /* Fixed width for the image */
+    width: 400px; /* Fixed width for the image */
     height: 100vh; /* Full viewport height for the image */
     background-color: #f4f4f4; /* Optional: Background color for the image container */
     display: flex;
