@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    background: #35424a;
+    color: #ffffff;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 0;
+}
+
+nav ul li a:hover,
+nav ul li a.current {
+    color: #e8491d;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #35424a;
+}
+
+section p,
+section ul {
+    font-size: 18px;
+}
+
+/* Experience Items */
+.experience-item {
+    margin-bottom: 40px;
+}
+
+.experience-item h3 {
+    color: #e8491d;
+}
+
+.experience-item p,
+.experience-item ul {
+    margin-left: 20px;
+}
+
+/* Achievements */
+#achievements ul {
+    list-style-type: disc;
+    margin-left: 40px;
+}
+
+/* Contact Section */
+#contact p a {
+    color: #e8491d;
+    text-decoration: none;
+}
+
+#contact p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
