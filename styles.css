@@ -218,7 +218,7 @@ footer {
 }
 
 .about-image {
-    flex: 0 0 250px; /* Restricts the image to a max width of 250px */
+    flex: 0 0 100px; /* Restricts the image to a max width of 250px */
 }
 
 .about-image img {
