@@ -213,12 +213,12 @@ footer {
 .about-container {
     display: flex;
     align-items: flex-start;
-    gap: 20px; /* Adds space between the image and the content */
+    gap: 30px; /* Adds space between the image and the content */
     flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .about-image {
-    flex: 0 0 100px; /* Restricts the image to a max width of 250px */
+    flex: 0 0 150px; /* Restricts the image to a max width of 250px */
 }
 
 .about-image img {
@@ -229,20 +229,4 @@ footer {
 
 .about-content {
     flex: 1; /* Allows the content to take up the remaining space */
-}
-
-/* Ensure proper layout on smaller screens */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Stacks the image and content vertically on small screens */
-        text-align: center; /* Optional: centers the text */
-    }
-
-    .about-image {
-        margin-bottom: 20px; /* Adds space between the image and the content when stacked */
-    }
-
-    .about-content {
-        text-align: left; /* Ensures text is aligned left when stacked */
-    }
 }
