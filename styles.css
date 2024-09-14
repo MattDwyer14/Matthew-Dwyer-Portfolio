@@ -1,20 +1,27 @@
-/* Reset some default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Define variables */
+:root {
+    --primary-color: #35424a;
+    --secondary-color: #e8491d;
+    --text-color: #ffffff;
+    --background-color: #f4f4f4;
+    --font-family: 'Arial', sans-serif;
+    --nav-height: 70px;
+    --container-width: 80%;
+    --heading-size: 36px;
+    --subheading-size: 24px;
+    --paragraph-size: 18px;
 }
 
 /* Body and container */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-family);
     line-height: 1.6;
-    padding-top: 70px; /* Adjust this to the height of your sticky nav */
-    background-color: #f4f4f4;
+    padding-top: var(--nav-height);
+    background-color: var(--background-color);
 }
 
 .container {
-    width: 80%;
+    width: var(--container-width);
     margin: auto;
     overflow: hidden;
 }
@@ -24,7 +31,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #35424a;
+    background-color: var(--primary-color);
     z-index: 1000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
@@ -37,11 +44,11 @@ nav .container {
 }
 
 nav h1.logo {
-    font-size: 24px;
+    font-size: var(--heading-size);
 }
 
 nav h1.logo a {
-    color: #ffffff;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -55,49 +62,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: var(--text-color);
     text-decoration: none;
     padding: 15px 0;
 }
 
 nav ul li a:hover,
 nav ul li a.current {
-    color: #e8491d;
-}
-
-/* Header / Hero Section */
-#home {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    height: 100vh;
-    color: #ffffff;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#home h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-#home p {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-#home .btn-primary {
-    background-color: #e8491d;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-#home .btn-primary:hover {
-    background-color: #cf3c1b;
+    color: var(--secondary-color);
 }
 
 /* Section Styling */
@@ -109,29 +81,25 @@ section {
 section h2 {
     text-align: center;
     margin-bottom: 40px;
-    color: #35424a;
+    color: var(--primary-color);
+    font-size: var(--heading-size);
 }
 
 section p,
 section ul {
-    font-size: 18px;
+    font-size: var(--paragraph-size);
 }
 
 /* About Section */
 #about {
     background-color: #e4e4e4;
     padding: 60px 20px;
-    border-top: 4px solid #35424a;
-}
-
-#about h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    border-top: 4px solid var(--primary-color);
 }
 
 #about .about-content h3 {
-    font-size: 24px;
-    color: #e8491d;
+    font-size: var(--subheading-size);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
@@ -145,10 +113,6 @@ section ul {
     background-color: #ffffff;
 }
 
-#skills h2 {
-    font-size: 36px;
-}
-
 #skills ul {
     margin: 20px 0;
     padding-left: 40px;
@@ -157,7 +121,7 @@ section ul {
 
 /* Experience Section */
 #experience {
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
 }
 
 .experience-item {
@@ -165,8 +129,8 @@ section ul {
 }
 
 .experience-item h3 {
-    font-size: 24px;
-    color: #e8491d;
+    font-size: var(--subheading-size);
+    color: var(--secondary-color);
 }
 
 .experience-item p,
@@ -190,11 +154,11 @@ section ul {
 }
 
 #contact p {
-    font-size: 20px;
+    font-size: var(--paragraph-size);
 }
 
 #contact p a {
-    color: #e8491d;
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
@@ -204,8 +168,8 @@ section ul {
 
 /* Footer */
 footer {
-    background-color: #35424a;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     padding: 20px 0;
 }
@@ -231,10 +195,10 @@ footer {
     }
 
     #home h2 {
-        font-size: 36px;
+        font-size: 28px;
     }
 
     #home p {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
