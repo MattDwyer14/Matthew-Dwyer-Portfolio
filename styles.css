@@ -75,7 +75,7 @@ nav ul li a.current {
 /* Section Styling */
 section {
     padding: 60px 0;
-    background-color: #ffffff;
+    background-color: var(--background-color);
 }
 
 section h2 {
@@ -92,7 +92,7 @@ section ul {
 
 /* About Section */
 #about {
-    background-color: #e4e4e4;
+    background-color: var(--background-color);
     padding: 60px 20px;
     border-top: 4px solid var(--primary-color);
 }
@@ -110,7 +110,7 @@ section ul {
 
 /* Skills Section */
 #skills {
-    background-color: #ffffff;
+    background-color: var(--background-color);
 }
 
 #skills ul {
@@ -140,7 +140,7 @@ section ul {
 
 /* Achievements Section */
 #achievements {
-    background-color: #ffffff;
+    background-color: var(--background-color);
 }
 
 #achievements ul {
@@ -150,7 +150,7 @@ section ul {
 
 /* Contact Section */
 #contact {
-    background-color: #e4e4e4;
+    background-color: var(--background-color);
 }
 
 #contact p {
