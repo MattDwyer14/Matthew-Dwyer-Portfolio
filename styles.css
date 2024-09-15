@@ -236,7 +236,6 @@ nav ul li {
 
 /* Fixed image on the left */
 .home-image {
-    position: fixed; /* Keeps the image fixed in place while scrolling */
     left: 0; /* Aligns it to the left edge */
     top: 0; /* Aligns it to the top */
     width: 400px; /* Fixed width for the image */
