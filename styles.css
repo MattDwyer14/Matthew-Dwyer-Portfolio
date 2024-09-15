@@ -132,10 +132,11 @@ section ul {
 .uni-logo-container {
     display: inline-flex;
     align-items: center; /* Align the content (text and image) to the center vertically */
+    margin-bottom: 5px;
 }
 
 .uni-logo {
-    width: 60px; /* Adjust the width as needed */
+    width: 80px; /* Adjust the width as needed */
     height: auto; /* Maintain the aspect ratio */
     vertical-align: left; /* Align the logo with the text */
     margin-left: 30px; /* Adds some space between the text and the logo */
