@@ -101,10 +101,13 @@ section ul {
     background-color: var(--background-color);
 }
 
-#skills ul {
-    margin: 20px 0;
-    padding-left: 40px;
-    list-style-type: disc;
+.skills-item {
+    margin-bottom: 40px;
+}
+
+.skills-item h3 {
+    font-size: var(--subheading-size);
+    color: var(--secondary-color);
 }
 
 /* education Section */
@@ -135,7 +138,7 @@ section ul {
     width: 60px; /* Adjust the width as needed */
     height: auto; /* Maintain the aspect ratio */
     vertical-align: left; /* Align the logo with the text */
-    margin-left: 10px; /* Adds some space between the text and the logo */
+    margin-left: 30px; /* Adds some space between the text and the logo */
 }
 
 /* Experience Section */
