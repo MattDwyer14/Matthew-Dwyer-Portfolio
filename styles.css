@@ -178,7 +178,7 @@ section ul {
     overflow: hidden;
 }
 
-#achievements-container ul {
+#achievements ul {
     list-style-type: disc;
     margin-left: 40px;
     width: var(--container-width);
