@@ -237,34 +237,28 @@ nav .menu-toggle:hover {
     background-color: #e8491d; /* Change color on hover */
 }
 
-/* Dropdown menu */
+/* Ensure nav-links is centered and takes up full width */
 nav .nav-links {
     display: none;
     flex-direction: column;
     position: absolute;
     top: 100%; /* Ensures the dropdown starts right after the navbar */
-    left: 0;
-    width: 100%;
+    left: 50%; /* Start positioning from the middle */
+    transform: translateX(-50%); /* Center the dropdown horizontally */
+    width: 100%; /* Ensure it takes up the full width */
     background-color: #333;
     z-index: 1;
     margin-top: 0; /* Remove any extra margin */
     padding-top: 0; /* Remove padding if there's any */
 }
 
-
 /* Show links when the menu button is clicked */
-nav .menu-toggle.active + .nav-links {
-    display: flex; /* Show the links */
-}
-
-
 nav .menu-toggle.active + .nav-links {
     display: flex; /* Show links on click */
     flex-direction: column; /* Stack the links vertically */
     width: 100%;
     background-color: #333;
 }
-
 
 nav ul li {
     margin: 10px 0; /* Space between links */
