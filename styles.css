@@ -197,27 +197,31 @@ footer {
     padding: 20px 0;
 }
 
-/* Hide navigation links by default and show only the menu button */
+/* Dropdown menu */
 nav .nav-links {
-    display: none; /* Hide the links initially */
-}
-
-nav .menu-toggle {
-    display: block; /* Always display the menu button */
+    display: none;
+    flex-direction: column;
+    position: absolute; /* Make the menu overlap */
+    top: 100%; /* Ensure it appears below the menu button */
+    left: 0;
+    width: 100%; /* Full-width for mobile */
     background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+    z-index: 1;
 }
 
 /* Show links when the menu button is clicked */
 nav .menu-toggle.active + .nav-links {
-    display: flex; /* Show the links when the button is active */
+    display: flex; /* Show the links */
+}
+
+
+nav .menu-toggle.active + .nav-links {
+    display: flex; /* Show links on click */
     flex-direction: column; /* Stack the links vertically */
     width: 100%;
     background-color: #333;
 }
+
 
 nav ul li {
     margin: 10px 0; /* Space between links */
