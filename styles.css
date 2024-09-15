@@ -50,7 +50,7 @@ nav .container {
 }
 
 nav h1.logo {
-    font-size: var(--secondary-color);
+    font-size: var(--heading-size);
 }
 
 nav h1.logo a {
