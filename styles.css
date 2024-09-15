@@ -250,6 +250,7 @@ nav ul li {
 /* Main layout for the About section */
 .home-container {
     display: flex;
+    flex-direction: row; /* Ensure the layout is row-based on larger screens */
 }
 
 /* Fixed image on the left */
@@ -262,11 +263,6 @@ nav ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.home-item h2 {
-    font-size: var(--subheading-size);
-    color: var(--secondary-color);
 }
 
 .home-image img {
@@ -298,4 +294,20 @@ nav ul li {
 
 .home-content p {
     margin-bottom: 20px;
+}
+
+/* Media query to hide the image on smaller screens */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Stack the text content and image vertically */
+    }
+
+    .home-image {
+        display: none; /* Hide the image on mobile */
+    }
+
+    .home-content {
+        margin-left: 0; /* Remove the space for the image */
+        max-width: 100%; /* Use the full width of the screen */
+    }
 }
