@@ -96,24 +96,6 @@ section ul {
     font-size: var(--paragraph-size);
 }
 
-/* About Section */
-#about {
-    background-color: var(--background-color);
-    padding: 60px 20px;
-    border-top: 4px solid var(--primary-color);
-}
-
-#about .about-content h3 {
-    font-size: var(--subheading-size);
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-
-#about .about-content p {
-    margin-bottom: 20px;
-    line-height: 1.7;
-}
-
 /* Skills Section */
 #skills {
     background-color: var(--background-color);
@@ -123,6 +105,25 @@ section ul {
     margin: 20px 0;
     padding-left: 40px;
     list-style-type: disc;
+}
+
+/* education Section */
+#education {
+    background-color: var(--background-color);
+}
+
+.education-item {
+    margin-bottom: 40px;
+}
+
+.education-item h3 {
+    font-size: var(--subheading-size);
+    color: var(--secondary-color);
+}
+
+.education-item p,
+.education-item ul {
+    margin-left: 20px;
 }
 
 /* Experience Section */
