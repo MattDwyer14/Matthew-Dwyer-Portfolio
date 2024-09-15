@@ -99,6 +99,9 @@ section ul {
 /* Skills Section */
 #skills {
     background-color: var(--background-color);
+    width: var(--container-width);
+    margin: auto;
+    overflow: hidden;
 }
 
 .skills-item {
@@ -113,6 +116,9 @@ section ul {
 /* education Section */
 #education {
     background-color: var(--background-color);
+    width: var(--container-width);
+    margin: auto;
+    overflow: hidden;
 }
 
 .education-item {
@@ -145,6 +151,9 @@ section ul {
 /* Experience Section */
 #experience {
     background-color: var(--background-color);
+    width: var(--container-width);
+    margin: auto;
+    overflow: hidden;
 }
 
 .experience-item {
@@ -164,28 +173,44 @@ section ul {
 /* Achievements Section */
 #achievements {
     background-color: var(--background-color);
+    width: var(--container-width);
+    margin: auto;
+    overflow: hidden;
 }
 
-#achievements ul {
+#achievements-container ul {
     list-style-type: disc;
     margin-left: 40px;
+    width: var(--container-width);
+    margin: auto;
+    overflow: hidden;
 }
 
 /* Contact Section */
-#contact {
+#contact-container {
     background-color: var(--background-color);
+    width: var(--container-width);
+    margin: auto;
+    overflow: hidden;
+    padding: 50px; /* Add padding to create space around the content */
+    max-width: 90%; /* Ensures the width doesn't exceed the screen size */
 }
 
 #contact p {
     font-size: var(--paragraph-size);
+    width: var(--container-width);
+    margin: auto;
+    overflow: hidden;
+    padding: 10px 20px; /* Add padding to give spacing to the paragraph text */
 }
 
 #contact p a {
     color: var(--secondary-color);
     text-decoration: none;
+    padding: 100px 20px;
 }
 
-#contact p a:hover {
+#contact-container p a:hover {
     text-decoration: underline;
 }
 
@@ -299,6 +324,31 @@ nav ul li {
 /* Media query to hide the image on smaller screens */
 @media (max-width: 768px) {
     .home-container {
+        flex-direction: column; /* Stack the text content and image vertically */
+        padding-top: 60px;
+    }
+
+    .achievements-container {
+        flex-direction: column; /* Stack the text content and image vertically */
+        padding-top: 60px;
+    }
+
+    .contact-container {
+        flex-direction: column; /* Stack the text content and image vertically */
+        padding-top: 60px;
+    }
+
+    .education-container {
+        flex-direction: column; /* Stack the text content and image vertically */
+        padding-top: 60px;
+    }
+
+    .experience-container {
+        flex-direction: column; /* Stack the text content and image vertically */
+        padding-top: 60px;
+    }
+
+    .skills-container {
         flex-direction: column; /* Stack the text content and image vertically */
         padding-top: 60px;
     }
