@@ -34,11 +34,15 @@
     </main>
 
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Matthew Dwyer</p>
-        </div>
-    </footer>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; <span id="year"></span> Matthew Dwyer</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
