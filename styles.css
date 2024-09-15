@@ -126,6 +126,13 @@ section ul {
     margin-left: 20px;
 }
 
+.uni-logo {
+    width: 25px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    vertical-align: middle; /* Align the logo with the text */
+    margin-left: 10px; /* Adds some space between the text and the logo */
+}
+
 /* Experience Section */
 #experience {
     background-color: var(--background-color);
