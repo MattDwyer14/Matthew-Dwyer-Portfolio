@@ -267,6 +267,8 @@ footer {
 /* Optional styles for text and headers */
 .home-content h2, .home-content h3 {
     margin-top: 20px;
+    font-size: var(--subheading-size);
+    color: var(--secondary-color);
 }
 
 .home-content p {
