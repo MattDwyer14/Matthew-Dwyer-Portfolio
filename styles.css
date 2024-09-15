@@ -216,13 +216,16 @@ nav .menu-toggle:hover {
 nav .nav-links {
     display: none;
     flex-direction: column;
-    position: absolute; /* Make the menu overlap */
-    top: 100%; /* Ensure it appears below the menu button */
+    position: absolute;
+    top: 100%; /* Ensures the dropdown starts right after the navbar */
     left: 0;
-    width: 80%; /* Full-width for mobile */
+    width: 100%;
     background-color: #333;
     z-index: 1;
+    margin-top: 0; /* Remove any extra margin */
+    padding-top: 0; /* Remove padding if there's any */
 }
+
 
 /* Show links when the menu button is clicked */
 nav .menu-toggle.active + .nav-links {
