@@ -204,7 +204,7 @@ nav .nav-links {
     position: absolute; /* Make the menu overlap */
     top: 100%; /* Ensure it appears below the menu button */
     left: 0;
-    width: 100%; /* Full-width for mobile */
+    width: 80%; /* Full-width for mobile */
     background-color: #333;
     z-index: 1;
 }
@@ -238,13 +238,12 @@ nav ul li {
 .home-image {
     left: 0; /* Aligns it to the left edge */
     top: 0; /* Aligns it to the top */
-    width: 400px; /* Fixed width for the image */
-    height: 100vh; /* Full viewport height for the image */
+    width: 300px; /* Fixed width for the image */
+    height: 80vh; /* Full viewport height for the image */
     background-color: #f4f4f4; /* Optional: Background color for the image container */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1); /* Adds a shadow to the right side of the image */
 }
 
 .home-item h2 {
