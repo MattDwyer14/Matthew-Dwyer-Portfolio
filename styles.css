@@ -50,7 +50,7 @@ nav .container {
 }
 
 nav h1.logo {
-    font-size: var(--heading-size);
+    font-size: var(--secondary-color);
 }
 
 nav h1.logo a {
@@ -247,7 +247,6 @@ footer {
 .home-image img {
     max-width: 100%; /* Ensure the image fits within its container */
     height: auto;
-    border-radius: 10px; /* Optional: Add some rounding for aesthetic */
 }
 
 /* Scrollable text content on the right */
