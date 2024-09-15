@@ -201,7 +201,7 @@ nav .menu-toggle {
     background-color: #333; /* Background color */
     color: white; /* Text color */
     border: none; /* Remove border */
-    padding: 10px 20px; /* Padding around the text */
+    padding: 10px 10px; /* Padding around the text */
     cursor: pointer; /* Change cursor to pointer */
     font-size: var(--text-color); /* Font size */
     border-radius: 5px; /* Rounded corners */
