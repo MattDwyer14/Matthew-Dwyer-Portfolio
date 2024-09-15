@@ -199,19 +199,33 @@ footer {
 
 /* Responsive Styling for screens smaller than 768px */
 @media (max-width: 768px) {
-    /* Adjust navigation bar to stack vertically */
-    nav .container {
-        flex-direction: column; /* Stack the navbar items vertically */
+    nav .nav-links {
+        display: none; /* Initially hidden on mobile */
+        flex-direction: column; /* Stack the links vertically */
+        background-color: #333; /* Background for mobile menu */
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        z-index: 1;
     }
 
-    nav ul {
-        flex-direction: column; /* Stack nav links vertically */
-        align-items: center;    /* Center align the links */
-        width: 100%;            /* Use full width */
+    nav .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    nav .menu-toggle.active + .nav-links {
+        display: flex; /* Show the menu when active */
     }
 
     nav ul li {
-        margin-left: 0;         /* Remove any left margin */
+        margin: 10px 0; /* Space between links */
+        text-align: center;
     }
 
     /* General container adjustments for smaller screens */
