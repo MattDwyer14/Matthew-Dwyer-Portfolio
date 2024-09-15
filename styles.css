@@ -300,10 +300,6 @@ nav ul li {
 @media (max-width: 768px) {
     .home-container {
         flex-direction: column; /* Stack the text content and image vertically */
-        padding-top: 40px;
-    }
-
-    .container {
         padding-top: 60px;
     }
 
