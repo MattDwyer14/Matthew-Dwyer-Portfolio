@@ -245,6 +245,11 @@ footer {
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1); /* Adds a shadow to the right side of the image */
 }
 
+.home-item h2 {
+    font-size: var(--subheading-size);
+    color: var(--secondary-color);
+}
+
 .home-image img {
     max-width: 100%; /* Ensure the image fits within its container */
     height: auto;
