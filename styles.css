@@ -5,7 +5,7 @@
     --text-color: #ffffff;
     --background-color: #f4f4f4;
     --font-family: 'Arial', sans-serif;
-    --nav-height: 150px;
+    --nav-height: 120px;
     --container-width: 80%;
     --heading-size: 30px;
     --subheading-size: 24px;
@@ -36,6 +36,7 @@ nav .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0; /* Increased from default */
 }
 nav h1.logo {
     font-size: var(--heading-size);
@@ -143,10 +144,11 @@ nav ul li {
 /* Image Styles */
 .home-image {
     width: 25%; 
-    height: auto; /* Maintain aspect ratio */
-    /* Remove float and any other conflicting styles */
-    border-radius: 10px; /* Optional: for aesthetics */
-    object-fit: cover; /* Ensure the image covers its container without distortion */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-right: 10px;
 }
 
 /* Text Container Styles */
@@ -162,12 +164,13 @@ nav ul li {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: var(--subheading-size);
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 .text p {
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: var(--paragraph-size);
+    padding-left: 20px;
 }
 
 /* Responsive Design */
