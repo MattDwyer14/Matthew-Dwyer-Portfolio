@@ -178,6 +178,9 @@ nav ul li {
     .container {
         flex-direction: column; /* Stack image above text on small screens */
     }
+    .home-container {
+        flex-direction: column; /* Stack image above text on small screens */
+    }
     .home-image {
         width: 100%; /* Full width */
         display: block; /* Ensure it's visible */
