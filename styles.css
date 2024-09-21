@@ -5,20 +5,19 @@
     --text-color: #ffffff;
     --background-color: #f4f4f4;
     --font-family: 'Arial', sans-serif;
-    --nav-height: 70px;
+    --nav-height: 150px;
     --container-width: 80%;
-    --heading-size: 36px;
+    --heading-size: 30px;
     --subheading-size: 24px;
     --paragraph-size: 18px;
+    --menu-font-size: 15px;
 }
 
-/* Reset default margins and paddings */
+/* General Styles */
 html, body {
     margin: 0;
     padding: 0;
 }
-
-/* Body and container */
 body {
     font-family: var(--font-family);
     line-height: 1.5;
@@ -26,333 +25,170 @@ body {
     background-color: var(--background-color);
 }
 
-.container {
-    width: var(--container-width);
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Sticky Navigation Bar */
+/* Navigation Bar Styles (unchanged) */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: var(--primary-color);
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
 }
-
-nav .container {
+nav .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 nav h1.logo {
     font-size: var(--heading-size);
+    margin-left: 80px;
 }
-
 nav h1.logo a {
     color: var(--secondary-color);
     text-decoration: none;
 }
-
 nav ul {
     list-style: none;
     display: flex;
 }
-
 nav ul li {
     margin-left: 20px;
 }
-
 nav ul li a {
     color: var(--text-color);
     text-decoration: none;
     padding: 15px 0;
 }
-
 nav ul li a:hover,
 nav ul li a.current {
     color: var(--secondary-color);
 }
-
-/* Section Styling */
-section {
-    padding: 60px 0;
-    background-color: var(--background-color);
+nav .menu-toggle {
+    background-color: #333;
+    color: white; 
+    border: none; 
+    padding: 10px 10px; 
+    margin-right: 100px;
+    cursor: pointer;
+    font-size: var(--menu-font-size);
+    border-radius: 5px;
 }
-
-section h2 {
+nav .menu-toggle:hover {
+    background-color: #e8491d;
+}
+nav .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    background-color: #333;
+    margin-top: 0;
+    padding-top: 0;
+}
+nav .menu-toggle.active + .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+}
+nav ul li {
+    margin: 10px 0;
     text-align: center;
-    margin-bottom: 40px;
-    color: var(--primary-color);
+}
+
+/* Container Styles */
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Align image and text side by side */
+    align-items: flex-start; /* Align items to the top */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+.container h1 {
+    margin-top: 20px;
     font-size: var(--heading-size);
+    color: var(--secondary-color);
 }
-
-section p,
-section ul {
-    font-size: var(--paragraph-size);
-}
-
-/* Skills Section */
-#skills {
-    background-color: var(--background-color);
-    width: var(--container-width);
-    margin: auto;
-    overflow: hidden;
-}
-
-.skills-item {
-    margin-bottom: 40px;
-}
-
-.skills-item h3 {
+.container h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: var(--subheading-size);
     color: var(--secondary-color);
 }
-
-/* education Section */
-#education {
-    background-color: var(--background-color);
-    width: var(--container-width);
-    margin: auto;
-    overflow: hidden;
-}
-
-.education-item {
-    margin-bottom: 40px;
-}
-
-.education-item h3 {
-    font-size: var(--subheading-size);
-    color: var(--secondary-color);
-}
-
-.education-item p,
-.education-item ul {
-    margin-left: 20px;
-}
-
-.uni-logo-container {
-    display: inline-flex;
-    align-items: center; /* Align the content (text and image) to the center vertically */
+.container p {
+    margin-top: 5px;
     margin-bottom: 5px;
+    font-size: var(--paragraph-size);
 }
-
 .uni-logo {
-    width: 80px; /* Adjust the width as needed */
-    height: auto; /* Maintain the aspect ratio */
-    vertical-align: left; /* Align the logo with the text */
-    margin-left: 30px; /* Adds some space between the text and the logo */
+    width: 70px;
+    height: auto;
+    margin-right: 30px;
 }
-
-/* Experience Section */
-#experience {
-    background-color: var(--background-color);
+/* Container Styles */
+.home-container {
     width: var(--container-width);
-    margin: auto;
-    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row; /* Align image and text side by side */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between image and text */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
-.experience-item {
-    margin-bottom: 40px;
+/* Image Styles */
+.home-image {
+    width: 25%; 
+    height: auto; /* Maintain aspect ratio */
+    /* Remove float and any other conflicting styles */
+    border-radius: 10px; /* Optional: for aesthetics */
+    object-fit: cover; /* Ensure the image covers its container without distortion */
 }
 
-.experience-item h3 {
+/* Text Container Styles */
+.text {
+    width: 75%; /* Take up remaining space */
+}
+.text h1 {
+    margin-top: 20px;
+    font-size: var(--heading-size);
+    color: var(--secondary-color);
+}
+.text h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: var(--subheading-size);
     color: var(--secondary-color);
 }
-
-.experience-item p,
-.experience-item ul {
-    margin-left: 20px;
-}
-
-/* Achievements Section */
-#achievements {
-    background-color: var(--background-color);
-    width: var(--container-width);
-    margin: auto;
-    overflow: hidden;
-}
-
-#achievements ul {
-    list-style-type: disc;
-    margin-left: 40px;
-    width: var(--container-width);
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Contact Section */
-#contact-container {
-    background-color: var(--background-color);
-    width: var(--container-width);
-    margin: auto;
-    overflow: hidden;
-    padding: 50px; /* Add padding to create space around the content */
-    max-width: 90%; /* Ensures the width doesn't exceed the screen size */
-}
-
-#contact p {
+.text p {
+    margin-top: 5px;
+    margin-bottom: 5px;
     font-size: var(--paragraph-size);
-    width: var(--container-width);
-    margin: auto;
-    overflow: hidden;
-    padding: 10px 20px; /* Add padding to give spacing to the paragraph text */
 }
 
-#contact p a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    padding: 100px 20px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack image above text on small screens */
+    }
+    .home-image {
+        width: 100%; /* Full width */
+        display: block; /* Ensure it's visible */
+    }
+    .home-text {
+        width: 100%; /* Full width */
+    }
 }
 
-#contact-container p a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
+/* Footer Styles (unchanged) */
 footer {
     background-color: var(--primary-color);
     color: var(--text-color);
     text-align: center;
     padding: 20px 0;
-}
- 
-nav .menu-toggle {
-    background-color: #333; /* Background color */
-    color: white; /* Text color */
-    border: none; /* Remove border */
-    padding: 10px 10px; /* Padding around the text */
-    cursor: pointer; /* Change cursor to pointer */
-    font-size: var(--text-color); /* Font size */
-    border-radius: 5px; /* Rounded corners */
-}
-
-/* Add hover effect */
-nav .menu-toggle:hover {
-    background-color: #e8491d; /* Change color on hover */
-}
-
-/* Ensure nav-links is centered and takes up full width */
-nav .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%; /* Ensures the dropdown starts right after the navbar */
-    left: 50%; /* Start positioning from the middle */
-    transform: translateX(-50%); /* Center the dropdown horizontally */
-    width: 100%; /* Ensure it takes up the full width */
-    background-color: #333;
-    z-index: 1;
-    margin-top: 0; /* Remove any extra margin */
-    padding-top: 0; /* Remove padding if there's any */
-}
-
-/* Show links when the menu button is clicked */
-nav .menu-toggle.active + .nav-links {
-    display: flex; /* Show links on click */
-    flex-direction: column; /* Stack the links vertically */
-    width: 100%;
-    background-color: #333;
-}
-
-nav ul li {
-    margin: 10px 0; /* Space between links */
-    text-align: center;
-}
-
-
-/* Main layout for the About section */
-.home-container {
-    display: flex;
-    flex-direction: row; /* Ensure the layout is row-based on larger screens */
-}
-
-/* Fixed image on the left */
-.home-image {
-    left: 0; /* Aligns it to the left edge */
-    top: 0; /* Aligns it to the top */
-    width: 300px; /* Fixed width for the image */
-    height: 80vh; /* Full viewport height for the image */
-    background-color: #f4f4f4; /* Optional: Background color for the image container */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.home-image img {
-    max-width: 100%; /* Ensure the image fits within its container */
-    height: auto;
-}
-
-/* Scrollable text content on the right */
-.home-content {
-    margin-left: 100px; /* Creates space for the fixed image */
-    padding: 20px;
-    max-width: 800px; /* Limit the width of the text */
-    flex: 1;
-    overflow-y: auto; /* Allow vertical scrolling for the text */
-}
-
-/* Optional styles for text and headers */
-.home-content h2, .home-content h3 {
-    margin-top: 20px;
-    font-size: var(--subheading-size);
-    color: var(--secondary-color);
-}
-
-.home-content h1 {
-    margin-top: 20px;
-    font-size: var(--subheading-size);
-    color: var(--secondary-color);
-}
-
-.home-content p {
-    margin-bottom: 20px;
-}
-
-/* Media query to hide the image on smaller screens */
-@media (max-width: 768px) {
-    .home-container {
-        flex-direction: column; /* Stack the text content and image vertically */
-        padding-top: 60px;
-    }
-
-    .achievements-container {
-        flex-direction: column; /* Stack the text content and image vertically */
-        padding-top: 60px;
-    }
-
-    .contact-container {
-        flex-direction: column; /* Stack the text content and image vertically */
-        padding-top: 60px;
-    }
-
-    .education-container {
-        flex-direction: column; /* Stack the text content and image vertically */
-        padding-top: 60px;
-    }
-
-    .experience-container {
-        flex-direction: column; /* Stack the text content and image vertically */
-        padding-top: 60px;
-    }
-
-    .skills-container {
-        flex-direction: column; /* Stack the text content and image vertically */
-        padding-top: 60px;
-    }
-
-    .home-image {
-        display: none; /* Hide the image on mobile */
-    }
-
-    .home-content {
-        margin-left: 0; /* Remove the space for the image */
-        max-width: 100%; /* Use the full width of the screen */
-    }
+    margin-top: 50px;
 }

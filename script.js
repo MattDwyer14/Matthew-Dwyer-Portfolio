@@ -21,5 +21,5 @@ document.querySelector(".menu-toggle").addEventListener("click", function () {
     this.classList.toggle("active");
     document.querySelector(".nav-links").classList.toggle("active");
 });
-
+document.getElementById("year").textContent = new Date().getFullYear();
 
