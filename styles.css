@@ -189,7 +189,7 @@ nav ul li {
         width: 100%; /* Full width */
     }
     :root {
-        --nav-height: 150;
+        --nav-height: 250;
     }
 }
 
