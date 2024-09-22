@@ -188,8 +188,8 @@ nav ul li {
     .text {
         width: 100%; /* Full width */
     }
-    body {
-        padding-top: 150;
+    :root {
+        --nav-height: 150;
     }
 }
 
